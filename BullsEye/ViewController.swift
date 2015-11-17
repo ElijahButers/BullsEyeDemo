@@ -29,6 +29,16 @@ class ViewController: UIViewController {
         currentValue = lroundf(slider.value)
 
     }
+    
+    @IBAction func showAlert(sender: UIButton) {
+        
+        let message = "The value of the slider is \(currentValue)"
+        let alert = UIAlertController(title: "Hello, world", message: message, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+
 
 }
 
