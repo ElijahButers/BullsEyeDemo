@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     
     var currentValue: Int = 50
+    var targetValue: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
     @IBAction func sliderMoved(sender: UISlider) {
         
         currentValue = lroundf(slider.value)
+        targetValue = 1 + Int(arc4random_uniform(100))
 
     }
     
